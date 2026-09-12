@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="team.css">
+</head>
+<body>
+      <div class="cyber-grid"></div>
+    <div class="nebula nebula-purple"></div>
+    <div class="nebula nebula-cyan"></div>
+
+    <header class="cyber-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Motion Community</span>
+                <span class="brand-sub">DIGITAL ECOSYSTEM</span>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="../index.html#about" class="nav-link">О нас</a>
+            <a href="../project/project.html" class="nav-link">Проекты</a>
+            <a href="team.html" class="nav-link active">Сотрудники</a>
+            <a href="../index.html#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="auth" id="auth-container">
+            <a href="../dls/auth.html" id="login-btn" class="btn-glow-action">Личный кабинет &rarr;</a>
+            <div id="user-profile-block" class="user-profile-block" style="display: none;">
+                <img id="user-avatar" class="user-avatar-img" src="" alt="Avatar">
+                <div class="user-info-text">
+                    <a href="../dls/profile.html" id="user-name" class="user-name-title" style="text-decoration: none;"></a>
+                    <span id="user-position" class="user-position-sub"></span>
+                </div>
+                <button id="logout-btn" class="btn-logout-cyber">Выйти</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="team-section">
+        <div class="team-container">
+            <div class="section-header">
+                <span class="section-tag">// НАША КОМАНДА</span>
+                <h2 class="section-title">Профессионалы своего <span class="neon-gradient-text">дела</span></h2>
+                <p class="section-subtitle">Менторы, разработчики и архитекторы экосистемы Motion Community, помогающие создавать продукты мирового уровня.</p>
+            </div>
+
+            <div class="team-grid" id="team-grid"></div>
+        </div>
+    </section>
+
+    <div id="modal-backdrop" class="modal-backdrop" style="display: none;">
+        <div class="cyber-modal">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div id="modal-content" class="modal-content-body"></div>
+        </div>
+    </div>
+</body>
+<script src="team.js"></script>
+</html>

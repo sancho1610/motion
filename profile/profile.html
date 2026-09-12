@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile-bio</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   <div class="cyber-grid"></div>
+<div class="nebula nebula-purple"></div>
+<div class="nebula nebula-cyan"></div>
+
+<header class="cyber-header">
+    <a href="../index.html" class="brand">
+        <div class="brand-logo-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+        </div>
+
+        <div class="brand-text">
+            <span class="brand-title">Motion Community</span>
+            <span class="brand-sub">DIGITAL ECOSYSTEM</span>
+        </div>
+    </a>
+
+    <nav class="nav-menu">
+        <a href="../index.html#about" class="nav-link">О нас</a>
+        <a href="../project/project.html" class="nav-link">Проекты</a>
+        <a href="../team/team.html" class="nav-link">Сотрудники</a>
+        <a href="../index.html#contacts" class="nav-link">Контакты</a>
+    </nav>
+
+    <div class="auth" id="auth-container">
+        <div id="user-profile-block" class="user-profile-block">
+            <div class="user-badge-avatar" id="user-avatar-initials">M</div>
+
+            <img
+                id="user-avatar"
+                class="user-avatar-img"
+                src=""
+                alt="Avatar"
+                style="display: none;"
+            >
+
+            <div class="user-info-text">
+                <span id="user-name" class="user-name-title">Загрузка...</span>
+                <span id="user-position" class="user-position-sub">...</span>
+            </div>
+
+            <a href="auth.html" style="text-decoration: none;">
+                <button id="logout-btn" class="btn-logout-cyber">
+                    Выйти
+                </button>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="main-hero profile-layout">
+    <div class="profile-wrapper">
+
+        <div class="hero-right-visual profile-left-card">
+            <div class="glass-hub">
+
+                <div class="hub-top">
+                    <div>
+                        <div class="hub-label">// ТЕКУЩИЙ АККАУНТ</div>
+                        <div class="hub-name" id="card-full-name">Загрузка...</div>
+                    </div>
+
+                    <div
+                        class="user-badge-avatar"
+                        id="card-avatar-initials"
+                        style="width: 44px; height: 44px; font-size: 16px;"
+                    >
+                        M
+                    </div>
+
+                    <img
+                        id="card-avatar"
+                        src=""
+                        alt="User Avatar"
+                        class="main-profile-img"
+                        style="display: none;"
+                    >
+                </div>
+
+                <div class="dashboard-stats profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-glow-bar"></div>
+                        <div class="stat-name">РОЛЬ В СИСТЕМЕ</div>
+                        <div class="stat-val" id="card-role-tag">// ...</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-glow-bar stat-glow-cyan"></div>
+                        <div class="stat-name">ОФИЦИАЛЬНАЯ ДОЛЖНОСТЬ</div>
+                        <div class="stat-val stat-position" id="card-position-display">...</div>
+                    </div>
+                </div>
+
+                <div id="admin-actions-panel" class="admin-controls-container" style="display: none;"></div>
+            </div>
+        </div>
+
+        <div class="hero-left-core profile-right-panel">
+            <div class="badge-container">
+                <div class="pulse-dot"></div>
+                <div class="badge-text">НАСТРОЙКИ ПРОФИЛЯ</div>
+            </div>
+
+            <h1 class="main-glance-title profile-title">
+                Личные <span class="neon-gradient-text">данные</span>
+            </h1>
+
+            <p class="hero-ux-description profile-description">
+                Обновите информацию о себе, чтобы ваша команда всегда видела актуальные контакты, стек и описание ваших навыков.
+            </p>
+
+            <form class="profile-edit-form" id="profileForm" novalidate>
+                <div class="form-grid">
+
+                    <div class="input-block">
+                        <label for="profile-firstname">Имя</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="profile-firstname"
+                                placeholder="Имя"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="profile-lastname">Фамилия</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="profile-lastname"
+                                placeholder="Фамилия"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="profile-username">Имя пользователя (Логин)</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="profile-username"
+                                placeholder="username"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="profile-email">Email адрес</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="email"
+                                id="profile-email"
+                                placeholder="email@domain.com"
+                                disabled
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-block full-width">
+                        <label for="profile-position">Должность в компании</label>
+                        <div class="input-wrapper">
+                            <input
+                                type="text"
+                                id="profile-position"
+                                placeholder="Например: Senior Frontend Developer"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="input-block full-width">
+                        <label for="profile-bio">Биография / О себе</label>
+                        <div class="input-wrapper">
+                            <textarea
+                                id="profile-bio"
+                                rows="4"
+                                placeholder="Расскажите немного о своих навыках, стеке технологий и опыте работы..."
+                            ></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button
+                        type="submit"
+                        class="btn-gradient-fill"
+                    >
+                        <span>Сохранить изменения</span>
+
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                        >
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<div id="members-modal">
+    <div class="members-modal-window">
+
+        <div class="members-modal-header">
+            <div>
+                <div class="members-modal-label">// ADMIN CONTROL</div>
+                <h2>Участники команды</h2>
+            </div>
+
+            <button type="button" id="close-members-modal" class="members-close">
+                ×
+            </button>
+        </div>
+
+        <div class="members-add-box">
+            <div class="members-add-title">
+                ДОБАВИТЬ УЧАСТНИКА
+            </div>
+
+            <div class="members-add-row">
+                <input
+                    type="number"
+                    id="member-user-id"
+                    placeholder="ID пользователя"
+                >
+
+                <button
+                    type="button"
+                    id="add-member-btn"
+                >
+                    Добавить
+                </button>
+            </div>
+
+            <div id="members-message"></div>
+        </div>
+
+        <div class="members-list-title">
+            ТЕКУЩИЕ УЧАСТНИКИ
+        </div>
+
+        <div id="members-list">
+            <div class="members-loading">
+                Загрузка...
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="profile.js"></script>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Motion Community</title>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="nebula nebula-purple"></div>
+    <div class="nebula nebula-cyan"></div>
+
+    <header class="cyber-header">
+        <a href="#" class="brand">
+            <div class="brand-logo-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Motion Community</span>
+                <span class="brand-sub">DIGITAL ECOSYSTEM</span>
+            </div>
+        </a>
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="project/project.html" class="nav-link">Проекты</a>
+            <a href="team/team.html" class="nav-link">Сотрудники</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="auth" id="auth-container">
+            <a href="dls/auth.html" id="login-btn" class="btn-glow-action">Личный кабинет &rarr;</a>
+            <div id="user-profile-block" class="user-profile-block" style="display: none;">
+                <img id="user-avatar" class="user-avatar-img" src="" alt="Avatar">
+                <div class="user-info-text">
+                    <a href="profile/profile.html" id="user-name" class="user-name-title" style="text-decoration: none;"></a>
+                    <span id="user-position" class="user-position-sub"></span>
+                </div>
+                <button id="logout-btn" class="btn-logout-cyber">Выйти</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-hero">
+        <div class="hero-left-core">
+            <div class="badge-container">
+                <span class="pulse-dot"></span>
+                <span class="badge-text">Motion Web Community</span>
+            </div>
+            
+            <h1 class="main-glance-title">
+                Создаём людей.<br>
+                <span class="neon-gradient-text">Проектируем будущее.</span>
+            </h1>
+            
+            <p class="hero-ux-description">
+                Интеллектуальная среда для синхронизации командной работы, траектории индивидуального обучения и прозрачного масштабирования IT-продуктов.
+            </p>
+            
+            <div class="interactive-actions">
+                <a href="project/project.html" class="btn-gradient-fill">
+                    <span>Исследовать проекты</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#about" class="btn-glass-blur">О сообществе</a>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span class="stat-glow-bar"></span>
+                    <div class="stat-val">15+</div>
+                    <div class="stat-name">Резидентов</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-glow-bar"></span>
+                    <div class="stat-val">10+</div>
+                    <div class="stat-name">Релизов</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-glow-bar"></span>
+                    <div class="stat-val">4</div>
+                    <div class="stat-name">Направления</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right-visual">
+            <div class="glass-hub">
+                <div class="hub-top">
+                    <div class="hub-meta">
+                        <span class="hub-label">LIVE WORKSPACE</span>
+                        <h3 class="hub-name">Motion Core</h3>
+                    </div>
+                    <div class="user-badge-avatar">M</div>
+                </div>
+
+                <div class="hub-switches">
+                    <div class="switch-node active-node">
+                        <div class="node-indicator"></div>
+                        <span class="node-num">02</span>
+                        <span class="node-title">Active</span>
+                    </div>
+                    <div class="switch-node">
+                        <div class="node-indicator"></div>
+                        <span class="node-num">08</span>
+                        <span class="node-title">Queue</span>
+                    </div>
+                    <div class="switch-node">
+                        <div class="node-indicator"></div>
+                        <span class="node-num">N</span>
+                        <span class="node-title">Nodes</span>
+                    </div>
+                </div>
+
+                <div class="process-stack">
+                    <div class="process-item">
+                        <div class="process-lead">
+                            <div class="avatar-ring ring-cyan">AM</div>
+                            <div class="process-details">
+                                <span class="proc-title">Agro Map Terminal</span>
+                                <span class="proc-tech">Neural Networks / Geo-Data</span>
+                            </div>
+                        </div>
+                        <div class="pulse-badge badge-cyan-glow">Running</div>
+                    </div>
+
+                    <div class="process-item">
+                        <div class="process-lead">
+                            <div class="avatar-ring ring-purple">AI</div>
+                            <div class="process-details">
+                                <span class="proc-title">AI Assistant RAG</span>
+                                <span class="proc-tech">LLM Core / Vector Database</span>
+                            </div>
+                        </div>
+                        <div class="pulse-badge badge-purple-glow">Review</div>
+                    </div>
+                </div>
+
+                <div class="floating-cyber-widget">
+                    <div class="widget-radial-bar"></div>
+                    <div class="widget-data">
+                        <span class="widget-tag">COMMUNITY RATING</span>
+                        <span class="widget-num">94.8 <span class="max-num">/ 100</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="community-section" id="about">
+    <div class="community-container">
+
+        <div class="community-heading">
+            <div class="community-heading-left">
+                <span class="community-eyebrow">
+                    <span class="community-eyebrow-dot"></span>
+                    О сообществе
+                </span>
+
+                <h2 class="community-title">
+                    Не просто обучение —
+                    <span>рабочая среда.</span>
+                </h2>
+            </div>
+
+            <p class="community-description">
+                Motion Community объединяет студентов, разработчиков,
+                дизайнеров и менеджеров вокруг реальных задач.
+                Участники растут через практику, получают роли в проектах
+                и формируют сильное портфолио.
+            </p>
+        </div>
+
+        <div class="community-cards">
+
+            <article class="community-card">
+                <div class="community-icon icon-purple">
+                    <svg width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor"
+                         stroke-width="2">
+                        <path d="M13 2L3 14h8l-1 8 11-14h-8l0-6z"/>
+                    </svg>
+                </div>
+
+                <div class="community-card-content">
+                    <h3>Реальные проекты</h3>
+                    <p>
+                        Работа над продуктами, которыми пользуются
+                        настоящие команды и организации.
+                    </p>
+                </div>
+
+                <span class="community-card-line"></span>
+            </article>
+
+
+            <article class="community-card">
+                <div class="community-icon icon-cyan">
+                    <svg width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor"
+                         stroke-width="2">
+                        <path d="M9.5 2a3.5 3.5 0 0 0-3.4 4.3
+                                 A3.5 3.5 0 0 0 4 12
+                                 a3.5 3.5 0 0 0 3.4 3.7
+                                 A3.5 3.5 0 0 0 11 19
+                                 a3.5 3.5 0 0 0 3.4-3.3
+                                 A3.5 3.5 0 0 0 18 12
+                                 a3.5 3.5 0 0 0-3.4-3.7
+                                 A3.5 3.5 0 0 0 9.5 2z"/>
+                        <path d="M12 6v12M6 12h12"/>
+                    </svg>
+                </div>
+
+                <div class="community-card-content">
+                    <h3>Сильная среда</h3>
+                    <p>
+                        Backend, frontend, AI, design и product —
+                        участники работают в одной команде.
+                    </p>
+                </div>
+
+                <span class="community-card-line"></span>
+            </article>
+
+
+            <article class="community-card">
+                <div class="community-icon icon-gradient">
+                    <svg width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor"
+                         stroke-width="2">
+                        <path d="M14.5 4.5
+                                 C16 3 19 3 21 3
+                                 c0 2 0 5-1.5 6.5
+                                 L16 13l-5-5 3.5-3.5z"/>
+                        <path d="M8 16l-4 4"/>
+                        <path d="M7 13l-3 1 6 6 1-3"/>
+                        <path d="M12 8l-4 4"/>
+                    </svg>
+                </div>
+
+                <div class="community-card-content">
+                    <h3>Рост по результату</h3>
+                    <p>
+                        Новые роли, ответственность и лидерство
+                        в зависимости от личного вклада.
+                    </p>
+                </div>
+
+                <span class="community-card-line"></span>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="nebula nebula-purple"></div>
+    <div class="nebula nebula-cyan"></div>
+
+    <header class="cyber-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Motion Community</span>
+                <span class="brand-sub">DIGITAL ECOSYSTEM</span>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="../index.html#about" class="nav-link">О нас</a>
+            <a href="project.html" class="nav-link active">Проекты</a>
+            <a href="../team/team.html" class="nav-link">Сотрудники</a>
+            <a href="../index.html#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="auth" id="auth-container">
+            <a href="../dls/auth.html" id="login-btn" class="btn-glow-action">Личный кабинет &rarr;</a>
+            <div id="user-profile-block" class="user-profile-block" style="display: none;">
+                <img id="user-avatar" class="user-avatar-img" src="" alt="Avatar">
+                <div class="user-info-text">
+                    <a href="../profile/profile.html" id="user-name" class="user-name-title" style="text-decoration: none;"></a>
+                    <span id="user-position" class="user-position-sub"></span>
+                </div>
+                <button id="logout-btn" class="btn-logout-cyber">Выйти</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+            <div class="section-header">
+                <span class="section-tag">// НАШЕ ПОРТФОЛИО</span>
+                <h2 class="section-title">Проекты, которыми мы <span class="neon-gradient-text">гордимся</span></h2>
+                <p class="section-subtitle">Реальные цифровые продукты, разработанные резидентами Motion Community от концепта до полноценного релиза.</p>
+            </div>
+
+            <div class="portfolio-grid" id="portfolio-grid"></div>
+        </div>
+    </section>
+
+        <div id="modal-backdrop" class="modal-backdrop" style="display: none;">
+        <div class="cyber-modal" style="max-width: 650px; border-radius: 24px;">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            
+            <!-- Лоадер -->
+            <div id="modal-loader" style="text-align: center; padding: 40px 0; display: none;">
+                <p style="color: #6366f1; font-weight: 600;">Загрузка проекта...</p>
+            </div>
+
+            <!-- Контейнер для основных данных -->
+            <div id="modal-main-data" class="modal-content-body" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span id="m-icon" style="font-size: 36px;"></span>
+                        <div>
+                            <h2 id="m-title" style="font-size: 24px; font-weight: 800; margin: 0;"></h2>
+                            <span id="m-category" style="color: #6366f1; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Описание проекта</h4>
+                    <p id="m-desc" style="color: #cbd5e1; font-size: 14.5px; line-height: 1.6;"></p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.04);">
+                    <div>
+                        <span style="color: #64748b; font-size: 13px;">Текущий статус:</span>
+                        <div id="m-status" style="font-weight: 600; font-size: 14.5px; margin-top: 2px;"></div>
+                    </div>
+                    <div>
+                        <span style="color: #64748b; font-size: 13px;">Задач в проекте:</span>
+                        <div id="m-tasks" style="font-weight: 600; font-size: 14.5px; margin-top: 2px;"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Команда проекта</h4>
+                    <div id="m-participants" style="display: flex; flex-wrap: wrap; gap: 8px; color: #cbd5e1; font-size: 14px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="project.js"></script>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task.css">
+    <title>Tasks</title>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="nebula nebula-purple"></div>
+    <div class="nebula nebula-cyan"></div>
+
+    <header class="cyber-header">
+        <a href="#" class="brand">
+            <div class="brand-logo-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-title">Motion Community</span>
+                <span class="brand-sub">DIGITAL ECOSYSTEM</span>
+            </div>
+        </a>
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="project/project.html" class="nav-link">Проекты</a>
+            <a href="team/team.html" class="nav-link">Сотрудники</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="auth" id="auth-container">
+            <a href="../dls/auth.html" id="login-btn" class="btn-glow-action">Личный кабинет &rarr;</a>
+            <div id="user-profile-block" class="user-profile-block" style="display: none;">
+                <img id="user-avatar" class="user-avatar-img" src="" alt="Avatar">
+                <div class="user-info-text">
+                    <a href="../profile/profile.html" id="user-name" class="user-name-title" style="text-decoration: none;"></a>
+                    <span id="user-position" class="user-position-sub"></span>
+                </div>
+                <button id="logout-btn" class="btn-logout-cyber">Выйти</button>
+            </div>
+        </div>
+    </header>
+    <section class="admin-panel" id="admin-panel">
+    <div class="admin-panel-header">
+        <div>
+            <span class="admin-label">ADMIN CONTROL</span>
+            <h2>Управление системой</h2>
+            <p>Создание проектов, задач и управление участниками команды.</p>
+        </div>
+    </div>
+
+    <div class="admin-actions">
+        <button class="admin-action-card" id="open-member-modal">
+            <div class="admin-action-icon">+</div>
+            <div>
+                <h3>Добавить участника</h3>
+                <p>Добавить пользователя в команду</p>
+            </div>
+        </button>
+
+        <button class="admin-action-card" id="open-project-modal">
+            <div class="admin-action-icon">◈</div>
+            <div>
+                <h3>Создать проект</h3>
+                <p>Создать новый проект</p>
+            </div>
+        </button>
+
+        <button class="admin-action-card" id="open-task-modal">
+            <div class="admin-action-icon">✓</div>
+            <div>
+                <h3>Создать задачу</h3>
+                <p>Добавить задачу в проект</p>
+            </div>
+        </button>
+    </div>
+
+    <div class="admin-message" id="admin-message"></div>
+</section>
+
+<div class="admin-modal-backdrop" id="admin-modal-backdrop">
+    <div class="admin-modal">
+
+        <button class="admin-modal-close" id="admin-modal-close">
+            ×
+        </button>
+
+        <form class="admin-form" id="member-form">
+            <span class="admin-label">TEAM MEMBER</span>
+
+            <h2>Добавить участника</h2>
+
+            <label>
+                ID пользователя
+                <input
+                    type="number"
+                    id="member-user-id"
+                    placeholder="Например: 2"
+                    required
+                >
+            </label>
+
+            <label>
+                ID команды
+                <input
+                    type="number"
+                    id="member-team-id"
+                    placeholder="Например: 1"
+                    required
+                >
+            </label>
+
+            <label>
+                Роль в команде
+                <input
+                    type="text"
+                    id="member-role"
+                    placeholder="Frontend Developer"
+                >
+            </label>
+
+            <button class="admin-submit" type="submit">
+                Добавить участника
+            </button>
+        </form>
+
+        <form class="admin-form" id="project-form">
+            <span class="admin-label">NEW PROJECT</span>
+
+            <h2>Создать проект</h2>
+
+            <label>
+                Название проекта
+                <input
+                    type="text"
+                    id="project-title"
+                    placeholder="Название проекта"
+                    required
+                >
+            </label>
+
+            <label>
+                Описание
+                <textarea
+                    id="project-description"
+                    placeholder="Описание проекта"
+                    required
+                ></textarea>
+            </label>
+
+            <label>
+                Статус
+                <select id="project-status">
+                    <option value="new">Новый</option>
+                    <option value="in_progress">В процессе</option>
+                    <option value="completed">Завершён</option>
+                </select>
+            </label>
+
+            <button class="admin-submit" type="submit">
+                Создать проект
+            </button>
+        </form>
+
+        <form class="admin-form" id="task-form">
+            <span class="admin-label">NEW TASK</span>
+
+            <h2>Создать задачу</h2>
+
+            <label>
+                Название задачи
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="Название задачи"
+                    required
+                >
+            </label>
+
+            <label>
+                Описание
+                <textarea
+                    id="task-description"
+                    placeholder="Описание задачи"
+                    required
+                ></textarea>
+            </label>
+
+            <label>
+                Приоритет
+                <select id="task-priority">
+                    <option value="low">Низкий</option>
+                    <option value="medium">Средний</option>
+                    <option value="high">Высокий</option>
+                </select>
+            </label>
+
+            <label>
+                Статус
+                <select id="task-status">
+                    <option value="new">Новая</option>
+                    <option value="in_progress">В процессе</option>
+                    <option value="completed">Завершена</option>
+                    <option value="paused">Приостановлена</option>
+                    <option value="cancelled">Отменена</option>
+                </select>
+            </label>
+
+            <label>
+                ID проекта
+                <input
+                    type="number"
+                    id="task-project"
+                    placeholder="Например: 1"
+                    required
+                >
+            </label>
+
+            <label>
+                ID исполнителя
+                <input
+                    type="number"
+                    id="task-user"
+                    placeholder="Например: 2"
+                >
+            </label>
+
+            <button class="admin-submit" type="submit">
+                Создать задачу
+            </button>
+        </form>
+
+    </div>
+</div>
+</body>
+<script src="task.js"></script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth.css">
+    <title>Register</title>
+</head>
+<body>
+      
+    <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+
+    <div class="bg-sphere sphere-1"></div>
+    <div class="bg-sphere sphere-2"></div>
+    
+    <a href="../index.html" class="back-to-home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>На главную</span>
+    </a>
+
+    <div class="auth-wrapper">
+        
+        <div class="auth-left-panel">
+            <div class="top-brand">
+                <div class="custom-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="brand-info">
+                    <div class="brand-name">Motion Community</div>
+                    <div class="brand-sub">INTERNAL SYSTEM</div>
+                </div>
+            </div>
+
+            <div class="left-main-content">
+                <h1 class="left-title">Присоединяйтесь к нашей экосистеме</h1>
+                <p class="left-desc">Создайте единый цифровой профиль для управления проектами, отслеживания задач вашей команды и профессионального роста.</p>
+                
+                <div class="features-list">
+                    <span class="feature-tag">⚡ Fast</span>
+                    <span class="feature-tag">🔒 Secure</span>
+                    <span class="feature-tag">💻 Smart</span>
+                </div>
+            </div>
+
+            <div class="left-footer">
+                Platform Version 2.0 • Secured Access
+            </div>
+        </div>
+
+        <div class="auth-right-panel">
+            <div class="form-container">
+                <span class="form-top-tag">Регистрация</span>
+                <h2 class="form-main-title">Создать аккаунт</h2>
+                <p class="form-main-desc">Заполните данные для создания вашей учетной записи.</p>
+
+                <form class="login-form" id="registerForm" novalidate>
+                    <div class="input-block">
+                        <label for="firstName">Имя</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <input type="text" id="firstName" placeholder="Нурбек" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="lastName">Фамилия</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <input type="text" id="lastName" placeholder="Абдрахманов" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="usernameInput">Имя пользователя (Логин)</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 1 0 10 10c0-2.5-1.5-4-3-4s-3 1.5-3 4v2"/></svg>
+                            <input type="text" id="usernameInput" placeholder="sulaiman" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="positionInput">Должность</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            <input type="text" id="positionInput" placeholder="Frontend Developer" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="emailInput">Email</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <input type="email" id="emailInput" placeholder="username@domain.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="password">Пароль</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="confirmPassword">Подтвердите пароль</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <input type="password" id="confirmPassword" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options register-option">
+                        <span class="checkbox-text">Уже есть аккаунт? <a href="auth.html" class="forgot-link">Войти</a></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Зарегистрироваться</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+
+                <div class="info-notice-box">
+                    💡 Данные шифруются. После успешной регистрации вы сможете войти в систему под своими данными.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="register.js"></script>
+</html>
